@@ -22,7 +22,7 @@ socket.on('connect', function () {
   socket.emit('join', params, function (err) {
     if (err) {
       alert(err);
-      window.location.href = '/';
+      window.location.href  = '/';
     } else {
       console.log('No error');
     }
@@ -33,7 +33,7 @@ socket.on('disconnect', function () {
   console.log('Disconnected from server');
 });
 
-socket.on('updateUserList', function (users) {
+socket.on( 'updateUserList', function (users) {
   var ol = jQuery('<ol></ol>');
 
   users.forEach(function (user) {
